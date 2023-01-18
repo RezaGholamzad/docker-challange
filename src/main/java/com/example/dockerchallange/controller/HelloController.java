@@ -17,4 +17,9 @@ public class HelloController {
     public String sayHello(@RequestParam String name) {
         return "Hello " + StringUtil.splitByCamelCase(name);
     }
+
+    @GetMapping("/author")
+    public String getAuthor() {
+        return "reza gholamzad";
+    }
 }
