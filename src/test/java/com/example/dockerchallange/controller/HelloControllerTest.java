@@ -27,7 +27,7 @@ public class HelloControllerTest {
 
     @Test
     void test_whenRequestIsHelloWithParameter_thenReturnHelloWithSplitCamelCaseParameter() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/hello/?name=RezaGholamzad"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/hello?name=RezaGholamzad"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Hello Reza Gholamzad")));
