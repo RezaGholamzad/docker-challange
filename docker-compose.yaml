@@ -1,0 +1,5 @@
+hello-server:
+  container_name: hello-app
+  image: app:latest
+  ports:
+    - 8080:8080
