@@ -1,4 +1,4 @@
-package com.example.dockerchalllange1.util;
+package com.example.dockerchallange.util;
 
 public class StringUtil {
     public static String splitByCamelCase (String input){
