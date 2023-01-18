@@ -32,4 +32,12 @@ public class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Hello Reza Gholamzad")));
     }
+
+    @Test
+    void test_whenRequestIsAuthor_thenReturnAuthorName() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.get("/author"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("reza gholamzad")));
+    }
 }
